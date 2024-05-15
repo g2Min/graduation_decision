@@ -1,9 +1,11 @@
+import Header from "components/common/Header";
 import { Outlet } from "react-router-dom";
 import styled from "styled-components";
 
 const Layout = () => {
   return (
     <Root>
+      <Header/>
       <Container>
         <Outlet />
       </Container>
@@ -18,8 +20,7 @@ const Root = styled.div`
   height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  // background-color: white;
+  align-items: center; 
 `;
 
 const Container = styled.div`
