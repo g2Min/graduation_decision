@@ -16,8 +16,8 @@ const Layout = () => {
 export default Layout;
 
 const Root = styled.div`
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center; 
@@ -25,6 +25,10 @@ const Root = styled.div`
 
 const Container = styled.div`
   width: 100%;
+  max-width: 1097px;
+  height: 100%;
   flex-grow: 1;
   display: flex;
+  padding-top: 50px;
+  justify-content: center;
 `;
