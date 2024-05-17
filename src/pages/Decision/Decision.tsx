@@ -2,6 +2,7 @@ import { SelectLayer } from "../style";
 import { major, year, classify } from "../optional.json";
 import SelectBox from "components/EBook/SelectBox";
 import { StylesConfig } from "react-select";
+import SheetJs from "components/Decision/SheetJs";
 
 const Decision = () => {
   return(
@@ -26,7 +27,7 @@ const Decision = () => {
           width={186}
         />
       </SelectLayer>
-
+      <SheetJs />
     </div>
   );
 }
