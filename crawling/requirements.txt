@@ -1,0 +1,5 @@
+selenium
+requests
+html_table_parser
+bs4
+pandas
