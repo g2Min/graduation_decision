@@ -21,9 +21,16 @@ export const UploadText = styled.div`
   font-style: normal;
   font-weight: 400;
   line-height: 150%; /* 30px */
+  &:hover{
+    text-decoration: underline;
+    cursor: pointer;
+  }
 `;
 
 export const Icon = styled.img`
   width: 34px;
   height: 33px;
+  &:hover{
+    cursor: pointer;
+  }
 `;
