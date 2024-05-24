@@ -21,6 +21,7 @@ const Root = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center; 
+  overflow: auto; /* 스크롤바 설정 */
 `;
 
 const Container = styled.div`
@@ -32,7 +33,7 @@ const Container = styled.div`
   padding-top: 50px;
   justify-content: center;
   flex: 1;
-  overflow: auto; /* 스크롤바 설정 */
-  padding: 20px; /* 내용과의 여백 */
+  // overflow: auto; /* 스크롤바 설정 */
+  // padding: 20px; /* 내용과의 여백 */
   box-sizing: border-box;
 `;
