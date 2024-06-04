@@ -37,6 +37,6 @@ const SheetJs = () => {
       {file && <ExcelReader file={file}/>}
     </div>
   );
-};
+};  
 
 export default SheetJs;
