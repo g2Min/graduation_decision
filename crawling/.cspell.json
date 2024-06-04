@@ -1,6 +1,9 @@
 {
   "words": [
     "rowspan",
-    "chromedriver"
+    "chromedriver",
+    "pymysql",
+    "sqlalchemy",
+    "jimin"
   ]
 }
