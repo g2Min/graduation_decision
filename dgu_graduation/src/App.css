@@ -33,6 +33,25 @@
     animation: logo-spin infinite 20s linear;
   }
 }
+/* src/App.css */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+table, th, td {
+  border: 1px solid #cccccc;
+}
+
+th, td {
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #f2f2f2;
+}
 
 .card {
   padding: 2em;
