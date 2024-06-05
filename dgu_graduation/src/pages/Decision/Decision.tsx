@@ -3,9 +3,20 @@ import { major, year, classify } from "../optional.json";
 import SelectBox from "components/EBook/SelectBox";
 import { StylesConfig } from "react-select";
 import SheetJs from "components/Decision/SheetJs";
+import ExcelFile from "components/Decision/ExcelFile";
+import {saveAs} from 'file-saver';
 
+const data = [
+  { name: "John" },
+  { name: "Jane" },
+];
 const Decision = () => {
-  return(
+  const handleDownload = async () => {
+    const response = await fetch('http://localhost:3000/sample.xlsx');
+    const blob = await response.blob();
+    saveAs(blob, 'sample.xlsx'); // 다운로드 파일 이름 지정
+  };
+  return (
     <div>
       <SelectLayer>
         <SelectBox
@@ -26,11 +37,12 @@ const Decision = () => {
           styles={colourStyles}
           width={186}
         />
+        <button onClick={handleDownload}>양식 다운로드받기</button>
       </SelectLayer>
       <SheetJs />
     </div>
   );
-}
+};
 
 export default Decision;
 
@@ -44,7 +56,7 @@ const colourStyles: StylesConfig<valueProp> = {
     ...styles,
     backgroundColor: "white",
     width: "auto",
-    display: 'block',
+    display: "block",
     // alignItems: "flex-start",
   }),
   option: (styles, { isDisabled, isFocused, isSelected }) => {
