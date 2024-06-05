@@ -1,5 +1,5 @@
 import React from 'react'
-import { StylesConfig } from 'react-select';
+import { ActionMeta, SingleValue, StylesConfig } from 'react-select';
 import Select from 'react-select';
 
 type valueProp = {
@@ -11,6 +11,7 @@ interface ComponentProps {
   placeHolder?: string;
   styles?: StylesConfig<valueProp>; 
   width?: number;
+
 }
 const SelectBox: React.FC<ComponentProps> = (prop) => {
   return(
@@ -18,6 +19,7 @@ const SelectBox: React.FC<ComponentProps> = (prop) => {
     isClearable
     options={prop?.options}
     placeholder={prop?.placeHolder}
+    
     styles={{
       ...prop.styles,
       control: (provided) => ({

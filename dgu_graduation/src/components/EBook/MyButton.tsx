@@ -1,3 +1,4 @@
+import { getEbook } from 'apis/ebook';
 import {Button} from './style';
 
 type ButtonProp = {
@@ -10,7 +11,9 @@ const MyButton = (prop: ButtonProp) => {
   const fontWeight = style[0];
   const background = style[1];
   return (
-    <Button style={{fontWeight: fontWeight, backgroundColor: background}}>
+    <Button style={{fontWeight: fontWeight, backgroundColor: background}} onClick={() => {
+      getEbook();
+    }}>
       {name}
     </Button>
   );

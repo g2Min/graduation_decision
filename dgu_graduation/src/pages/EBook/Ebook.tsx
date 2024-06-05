@@ -7,6 +7,8 @@ import MyButton from "components/EBook/MyButton";
 import Culture from "./Culture";
 import Major from "./Major";
 import Grad from "./Grad";
+import { useRecoilState } from "recoil";
+import classAtom from "stores/atom";
 
 type navProp = {
   name: string;
@@ -20,12 +22,18 @@ const Ebook = () => {
     { name: "전 공", id: 1 },
     { name: "졸업요건", id: 2 },
   ];
+  const [selectValue, setSelectedValue] = useRecoilState(classAtom);
 
   const changeFocus = (item: navProp) => {
     setFocused(
       focused.map((value, index) => (index === item.id ? true : false))
     );
   };
+
+  const handleSelectChange = (selectedOption: any) => {
+    setSelectedValue(selectedOption);
+  };
+
   return (
     <div>
       <SelectLayer>

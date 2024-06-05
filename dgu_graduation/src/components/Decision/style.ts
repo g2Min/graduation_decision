@@ -8,9 +8,9 @@ export const UploadContainer = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  background-color: #EBEBEB;
+  background-color: #ebebeb;
   align-items: center;
-  border-radius: 10px; 
+  border-radius: 10px;
 `;
 
 export const UploadText = styled.div`
@@ -21,7 +21,7 @@ export const UploadText = styled.div`
   font-style: normal;
   font-weight: 400;
   line-height: 150%; /* 30px */
-  &:hover{
+  &:hover {
     text-decoration: underline;
     cursor: pointer;
   }
@@ -30,7 +30,13 @@ export const UploadText = styled.div`
 export const Icon = styled.img`
   width: 34px;
   height: 33px;
-  &:hover{
+  &:hover {
     cursor: pointer;
   }
+`;
+
+export const ModalButton = styled.button`
+  width: 100px;
+  border: 1px solid black;
+  border-radius: 5px;
 `;
