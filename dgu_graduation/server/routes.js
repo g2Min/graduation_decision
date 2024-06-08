@@ -37,6 +37,13 @@ const db = require("./db");
 
 const router = express.Router();
 
+const redisClient = redis.createClient({ url: 'redis://localhost:6379' });
+const getAsync = promisify(redisClient.get).bind(redisClient);
+const setAsync = promisify(redisClient.set).bind(redisClient);
+
+redisClient.on('error', (err) => console.log('Redis Client Error', err));
+redisClient.connect();
+
 router.post("/data", async (req, res) => {
   // const { major, year, level } = req.query;
   const {major} = req.query;

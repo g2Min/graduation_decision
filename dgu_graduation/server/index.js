@@ -1,6 +1,9 @@
 const express = require('express');
 const cors = require('cors');
 const routes = require('./routes');
+const fetch = require('node-fetch');
+const redis = require('redis');
+const { promisify } = require('util');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
